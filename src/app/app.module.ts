@@ -3,27 +3,28 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HeaderComponent } from './components/template/header/header.component';
-
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { FooterComponent } from './components/template/footer/footer.component';
-import { NavComponent } from './components/template/nav/nav.component';
-
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
-import { HomeComponent } from './views/home/home.component';
 import { MatMenuModule } from '@angular/material/menu';
-import { NotasComponent } from './views/notas/notas.component';
-import { DisciplinasComponent } from './views/disciplinas/disciplinas.component';
-import { TurmaComponent } from './views/turma/turma.component';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './components/template/login/login.component';
 import { FlexLayoutModule } from '@angular/flex-layout'
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
 
+
+import { HeaderComponent } from './components/template/header/header.component';
+import { FooterComponent } from './components/template/footer/footer.component';
+import { NavComponent } from './components/template/nav/nav.component';
+import { HomeComponent } from './views/home/home.component';
+import { NotasComponent } from './views/notas/notas.component';
+import { DisciplinasComponent } from './views/disciplinas/disciplinas.component';
+import { LoginComponent } from './views/login/login.component';
+import { TurmaComponent } from './views/turma/turma.component';
+import { RedefinirSenhaComponent } from './views/redefinir-senha/redefinir-senha.component';
 
 const appRoutes: Routes = [
   {
@@ -46,7 +47,8 @@ const appRoutes: Routes = [
     NotasComponent,
     DisciplinasComponent,
     TurmaComponent,
-    LoginComponent
+    LoginComponent,
+    RedefinirSenhaComponent
   ],
   imports: [
     BrowserModule,
@@ -60,7 +62,8 @@ const appRoutes: Routes = [
     MatFormFieldModule,
     FlexLayoutModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
