@@ -13,7 +13,28 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { HomeComponent } from './views/home/home.component';
-import { AuthModule } from './auth/auth.module';
+import { MatMenuModule } from '@angular/material/menu';
+import { NotasComponent } from './views/notas/notas.component';
+import { DisciplinasComponent } from './views/disciplinas/disciplinas.component';
+import { TurmaComponent } from './views/turma/turma.component';
+import { RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from './components/template/login/login.component';
+import { FlexLayoutModule } from '@angular/flex-layout'
+import { MatFormFieldModule } from '@angular/material/form-field'
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+
+
+const appRoutes: Routes = [
+  {
+    path: '',
+    component: LoginComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
+  }
+];
 
 @NgModule({
   declarations: [
@@ -21,7 +42,11 @@ import { AuthModule } from './auth/auth.module';
     HeaderComponent,
     FooterComponent,
     NavComponent,
-    HomeComponent
+    HomeComponent,
+    NotasComponent,
+    DisciplinasComponent,
+    TurmaComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +55,12 @@ import { AuthModule } from './auth/auth.module';
     MatSidenavModule,
     MatCardModule,
     MatListModule,
-    AuthModule
+    RouterModule.forRoot(appRoutes),
+    MatMenuModule,
+    MatFormFieldModule,
+    FlexLayoutModule,
+    MatInputModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

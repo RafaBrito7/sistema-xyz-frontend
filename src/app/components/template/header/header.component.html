@@ -14,13 +14,16 @@
         </a>
     </span>
 
+
+
     <span class="logged-user">
-        <a>
-            Nome_Usuário
-            <i  class="material-icons">
-                perm_identity
-            </i>
-        </a>
+        <button mat-button [matMenuTriggerFor]="menu" id="box-perfil">
+            <i class="material-icons">perm_identity</i>
+        </button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item>Perfil</button>
+            <button mat-menu-item>Desconectar</button>
+        </mat-menu>
     </span>
 
 </mat-toolbar>

@@ -1,0 +1,13 @@
+.img-logo{
+    width: auto;
+    height: 30px;
+    margin-top: 10px;
+}
+
+.btn-submit{
+    min-width: 6rem;
+}
+
+mat-card{
+    height: 25rem;
+}
