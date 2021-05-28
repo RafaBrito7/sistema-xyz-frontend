@@ -1,0 +1,6 @@
+.img-perfil img{
+    max-height: 200px;
+    width: auto;
+    display: block;
+    border: 3px solid black;
+}

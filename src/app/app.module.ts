@@ -25,6 +25,7 @@ import { DisciplinasComponent } from './views/disciplinas/disciplinas.component'
 import { LoginComponent } from './views/login/login.component';
 import { TurmaComponent } from './views/turma/turma.component';
 import { RedefinirSenhaComponent } from './views/redefinir-senha/redefinir-senha.component';
+import { DashboardComponent } from './views/dashboard/dashboard.component';
 
 const appRoutes: Routes = [
   {
@@ -34,6 +35,10 @@ const appRoutes: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'dashboard',
+    component: HomeComponent
   }
 ];
 
@@ -48,7 +53,8 @@ const appRoutes: Routes = [
     DisciplinasComponent,
     TurmaComponent,
     LoginComponent,
-    RedefinirSenhaComponent
+    RedefinirSenhaComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,10 @@
+.login{
+    height: 100vh;
+}
+
+.router-div{
+    padding: 1rem;
+    width: calc(100% - 200px);
+    margin-left: 200px;
+    box-sizing: border-box;
+}

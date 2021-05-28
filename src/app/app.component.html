@@ -1,14 +1,13 @@
-<!--
-<app-header></app-header>
-<app-nav></app-nav>
-<app-footer></app-footer>
--->
-
-<div *ngIf="router.url == '/login'">
-    <h1>Hello</h1>
-</div>
-
-<mat-drawer-container fullscreen>
-    <router-outlet></router-outlet>
+<mat-drawer-container fullscreen *ngIf="router.url === '/' || router.url === '/login'">
+    <div class="login">
+        <router-outlet></router-outlet>
+    </div>
 </mat-drawer-container>
-
+<mat-drawer-container fullscreen *ngIf="router.url !== '/login' && router.url !== '/'">
+    <app-header></app-header>
+    <app-nav></app-nav>
+    <div class="router-div">
+        <router-outlet></router-outlet>
+    </div>
+    <app-footer></app-footer>
+</mat-drawer-container>

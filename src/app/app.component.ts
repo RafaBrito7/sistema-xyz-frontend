@@ -19,9 +19,9 @@ export class AppComponent {
   }
 
   ngOnInit(){
-    if(this.user == ""){
-      this.router.navigateByUrl("/login")
-    }
+    // if(this.router.url == "/"){
+    //   this.router.navigateByUrl("/login")
+    // }
   }
   
 
